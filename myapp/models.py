@@ -12,7 +12,7 @@ from django.core.exceptions import ValidationError
 class custm_user(AbstractUser):
     phone = models.IntegerField(null=True,blank=True)
     age = models.IntegerField(("Age"),null=True,blank=True)
-    createTime= models.DateTimeField(auto_now_add=True)
+    lastUpdatedTime= models.DateTimeField(auto_now=True)    
     dob = models.DateField(("Date of Birth"),null=True,blank=True)
     pro_pic = models.ImageField(upload_to="dp",default="default_pic.jpg")
     thumbnail_pro_pic = models.ImageField(upload_to="thumbnail",default="default_pic.jpg",blank=True)
